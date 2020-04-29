@@ -6,7 +6,7 @@ script_folder=/volume1/Plex/scripts
 # p12 file
 p12_file_path=$script_folder/syno.p12
 # p12 password
-p12cert_password=plexcertGengXin
+p12cert_password=xxxxxxxxxxxxxxxxx
 # Synology's Default Let's encrypt folder
 letsencrypt_cert_folder=/usr/syno/etc/certificate/_archive/Iydq8O
 # renew timestamp
