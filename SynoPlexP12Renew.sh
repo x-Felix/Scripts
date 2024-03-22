@@ -48,7 +48,7 @@ generate_p12=true
 # generate a new certificate file if necessary, and restart Plex
   if expr "$generate_p12" "=" "true" > /dev/null; then
   echo "Generating the p12 certificate file..."
- openssl pkcs12 -export -out $p12_file_path -in $letsencrypt_cert_folder/cert.pem -inkey $letsencrypt_cert_folder/privkey.pem -certfile $letsencrypt_cert_folder/chain.pem -name "Domain" -password pass:$p12cert_password
+ openssl pkcs12 -export -out $p12_file_path -in $letsencrypt_cert_folder/cert.pem -inkey $letsencrypt_cert_folder/privkey.pem -certfile $letsencrypt_cert_folder/chain.pem -name "Domain" -password pass:$p12cert_password -certpbe AES-256-CBC -keypbe AES-256-CBC -macalg SHA256
    chmod +r $p12_file_path
   chown admin:users $p12_file_path
    echo "Restarting Plex Media Server..."
